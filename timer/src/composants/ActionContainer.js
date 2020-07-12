@@ -3,17 +3,15 @@ import TimerForm from './TimerForm';
 import Button from './Button';
 
 class ActionContainer extends Component {
+    state = {
+        isFormOpen:false
+    }
     render(){
-        return (
-            <div>
-               {this.props.isFormOpen ?(
-                    <TimerForm />   
-               ) :
-               (
-                   <Button />
-               )}
-            </div>           
-        )
+        if(this.state.isFormOpen){
+            return <TimerForm />
+        }else{
+            return <Button />
+        }
     }
 }
 

@@ -85,7 +85,7 @@ span {
   border: 0.1rem solid #0e2430;
   border-bottom: none;
   border-radius: 0.55rem;
-  width: 95%;
+ /* width: 95%;*/
   height: 15rem;
   margin-bottom: 2rem;
   padding-bottom: 0;

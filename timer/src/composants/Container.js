@@ -3,15 +3,28 @@ import TimerForm from './TimerForm';
 import Timer from './Timer';
 
 class Container extends Component {
+    state = {
+        isFormOpen : false
+    }
     render(){
+        
         return (
-            <div>
-               {this.props.isFormOpen ? 
+            <div className="list--container">
+               {this.state.isFormOpen ? 
                (
-                    <TimerForm />
+                    <TimerForm 
+                    title={this.props.title}
+                    project={this.props.project}
+                    />
                ) : 
                (
-                   <Timer />
+                   <Timer 
+                        title={this.props.title}
+                        project={this.props.project}
+                        id={this.props.id}
+                        elapsed={this.props.elapsed}
+                        runningSince={this.props.runningSince}
+                   />
                )}
             </div>           
         )

@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import Container from './Container';
 
 class ListContainer extends Component {
+    renderContainer = () => {
+        return this.props.timers.map((timer => {
+            return <Container key={timer.id}{...timer}/>
+        }))
+    }
     render(){
         return (
             <div className="list--container">
-               <Container 
-                    isFormOpen={false}
-               />
-               <Container
-                    isFormOpen
-                />
-               
+                {this.renderContainer()}              
             </div>           
         )
     }
