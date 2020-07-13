@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Button extends Component {
     render(){
         return (
-            <button className="button__outline">
+            <button onClick={this.props.handleFormOpen} className="button__outline">
                +
             </button>           
         )
