@@ -25,7 +25,7 @@ class ActionContainer extends Component {
             return (
                 <TimerForm 
                     onSub={this.onSub}
-                    onCloseForm={this.props.handleFormClose}
+                    onCloseForm={this.handleFormClose}
                 />
                 )
         }else{
