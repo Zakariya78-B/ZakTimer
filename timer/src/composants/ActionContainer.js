@@ -11,7 +11,7 @@ class ActionContainer extends Component {
     }
     render(){
         if(this.state.isFormOpen){
-            return <TimerForm onSubmit={this.props.onSubmit}/>
+            return <TimerForm onSub={this.props.onSub}/>
         }else{
             return <Button  handleFormOpen={this.handleFormOpen}/>
         }

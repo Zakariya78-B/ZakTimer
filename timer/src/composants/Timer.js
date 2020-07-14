@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 import '../helpers.js'; 
 
 class Timer extends Component {
+    handlePlay = () =>{
+        this.props.onPlay(this.props.id)
+    }
+    handlePause = () =>{
+        this.props.onPause(this.props.id)
+    }
+    renderButton(){
+        if(this.props.runningSince){
+            return <button onClick={this.handlePause} className="button">Pause</button> 
+        }else{
+            return <button  onClick={this.handlePlay} className="button">Play</button> 
+        }
+    }
+
     render(){
         const elapsedString = window.helpers.renderElapsedString(
             this.props.elapsed,
@@ -25,7 +39,7 @@ class Timer extends Component {
                     </div>
                     
                 </div>  
-                <button className="button">Play</button>            
+                {this.renderButton()}            
             </div>           
         )
     }

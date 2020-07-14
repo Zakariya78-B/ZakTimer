@@ -19,7 +19,7 @@ class Container extends Component {
                     title={this.props.title}
                     project={this.props.project}
                     id={this.props.id}
-                    onSubmit={this.props.onSubmit}
+                    onSub={this.props.onSub}
                     />
                ) : 
                (
@@ -31,6 +31,9 @@ class Container extends Component {
                         runningSince={this.props.runningSince}
                         onEditFormOpen={this.handleEditFormOpen}
                         onDelete={this.props.onDelete}
+                        onPlay={this.props.onPlay}
+                        onPause={this.props.onPause}
+
                    />
                )}
             </div>           

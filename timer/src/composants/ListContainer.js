@@ -6,9 +6,11 @@ class ListContainer extends Component {
         return this.props.timers.map((timer => {
             return (
                 <Container
-                    onSubmit={this.props.onSubmit}
+                    onSub={this.props.onSub}
                     onDelete={this.props.onDelete}
                     key={timer.id}
+                    onPlay={this.props.onPlay}
+                    onPause={this.props.onPause}
                     {...timer}
                 />
             )

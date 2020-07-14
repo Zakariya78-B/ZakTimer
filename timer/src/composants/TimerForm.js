@@ -15,10 +15,11 @@ class TimerForm extends Component {
         const {title,project} = this.state;
         if(this.props.id){
                 const id = this.props.id;
-                this.props.onSubmit({id,title,project});
-               
+                this.props.onSub({id,title,project});
+               console.log("testif")
         }else{
-            this.props.onSubmit({title,project});
+            this.props.onSub({title,project});
+            console.log("testelse")
            
         }
     }
