@@ -6,6 +6,9 @@ class Container extends Component {
     state = {
         isFormOpen : false
     }
+    handleEditFormOpen = () =>{
+        this.setState({ isFormOpen: true});
+    }
     render(){
         
         return (
@@ -15,6 +18,8 @@ class Container extends Component {
                     <TimerForm 
                     title={this.props.title}
                     project={this.props.project}
+                    id={this.props.id}
+                    onSubmit={this.props.onSubmit}
                     />
                ) : 
                (
@@ -24,6 +29,7 @@ class Container extends Component {
                         id={this.props.id}
                         elapsed={this.props.elapsed}
                         runningSince={this.props.runningSince}
+                        onEditFormOpen={this.handleEditFormOpen}
                    />
                )}
             </div>           

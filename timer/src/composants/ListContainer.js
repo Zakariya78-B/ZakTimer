@@ -4,7 +4,7 @@ import Container from './Container';
 class ListContainer extends Component {
     renderContainer = () => {
         return this.props.timers.map((timer => {
-            return <Container key={timer.id}{...timer}/>
+            return <Container onSubmit={this.props.onSubmit} key={timer.id}{...timer}/>
         }))
     }
     render(){
