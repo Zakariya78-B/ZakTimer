@@ -49,11 +49,20 @@ class Box extends Component {
             })
         })
     }
+    handleDelete = id =>{
+        this.setState({
+            timers: this.state.timers.filter(timer => timer.id !== id)
+        });
+    }
     render(){
         return (
             <div className="boxed--view">
                 <div className="boxed--view__box">
-                    <ListContainer onSubmit={this.props.handleEditTimer} timers={this.state.timers}/>
+                    <ListContainer 
+                        onSubmit={this.props.handleEditTimer}
+                        onDelete={this.handleDelete}
+                        timers={this.state.timers}
+                    />
                     <ActionContainer onSubmit={this.handleCreateTimer}/>
                 </div>
             </div>           

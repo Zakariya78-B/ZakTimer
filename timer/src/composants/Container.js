@@ -30,6 +30,7 @@ class Container extends Component {
                         elapsed={this.props.elapsed}
                         runningSince={this.props.runningSince}
                         onEditFormOpen={this.handleEditFormOpen}
+                        onDelete={this.props.onDelete}
                    />
                )}
             </div>           
