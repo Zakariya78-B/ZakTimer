@@ -9,6 +9,13 @@ class Container extends Component {
     handleEditFormOpen = () =>{
         this.setState({ isFormOpen: true});
     }
+    handleEditFormClose = () =>{
+        this.setState({ isFormOpen: false});
+    }
+    onSub = ({ id,title, project,}) =>{
+        this.handleEditFormClose();
+        this.props.onSub({id,title,project});
+    }
     render(){
         
         return (
@@ -19,7 +26,8 @@ class Container extends Component {
                     title={this.props.title}
                     project={this.props.project}
                     id={this.props.id}
-                    onSub={this.props.onSub}
+                    onSub={this.onSub}
+                    onCloseForm={this.handleEditFormClose}
                     />
                ) : 
                (
